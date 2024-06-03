@@ -112,6 +112,12 @@ ul {
     display: none;
 }
 
+.rp1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
 /* header */
 
 #flx_header {
@@ -177,6 +183,14 @@ ul {
     gap: 60px;
 }
 
+#flx_section1 #div1::before {
+    content: "Maçonnerie Artisanale";
+    display: block;
+    font-family: var(--fontRoboto);
+    font-size: 12.7px;
+    font-weight: 400;
+}
+
 /* section service */
 
 #service {
@@ -198,6 +212,14 @@ ul {
     gap: 20px;
 
 }
+#service #pad_l::before {
+    content: "Notre équipe";
+    display: block;
+    font-family: var(--fontRoboto);
+    font-size: 12.7px;
+    font-weight: 400;
+}
+
 
 /* section_réalisation */
 
@@ -213,7 +235,6 @@ ul {
 
 #section_réalisation div {
     max-width: 1040px;
-
 }
 
 #section_réalisation div img {
@@ -222,19 +243,30 @@ ul {
     object-fit: cover;
 }
 
-.rp1 {
+.gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
 }
 
-.rp2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.gallery img {
     width: 100%;
+    height: auto;
 }
 
+.gallery img:nth-child(1),
+.gallery img:nth-child(2),
+.gallery img:nth-child(3),
+.gallery img:nth-child(6),
+.gallery img:nth-child(7),
+.gallery img:nth-child(8) {
+    grid-column: span 2;
+}
+
+.gallery img:nth-child(4),
+.gallery img:nth-child(5) {
+    grid-column: span 3; 
+}
 /* section lien service */
 
 #lien_service {
@@ -272,6 +304,8 @@ ul {
     height: 51px;
     padding-bottom: 20px;
 }
+
+
 
 /* section form */
 
